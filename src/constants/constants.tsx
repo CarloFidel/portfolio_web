@@ -1,0 +1,72 @@
+export const POSTERS = [
+  {
+    id: "hvila",
+    title: "Hvíla",
+    year: "2024",
+    role: "Original Score",
+    img: "https://images.unsplash.com/photo-1667857431728-00884201d629?w=600&h=900&fit=crop&auto=format",
+    alt: "Dramatic road lined with dark trees",
+  },
+  {
+    id: "skuggi",
+    title: "Skuggi",
+    year: "2023",
+    role: "Original Score & Sound Design",
+    img: "https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?w=600&h=900&fit=crop&auto=format",
+    alt: "Solitary figure walking between trees at dusk",
+  },
+  {
+    id: "nacht",
+    title: "Nacht",
+    year: "2023",
+    role: "Original Score",
+    img: "https://images.unsplash.com/photo-1572283046480-e990be92d301?w=600&h=900&fit=crop&auto=format",
+    alt: "Dimly lit gas station at night under a single overhead light",
+  },
+  {
+    id: "stille",
+    title: "Stille",
+    year: "2022",
+    role: "Orchestral Score",
+    img: "https://images.unsplash.com/photo-1611419010196-a360856fc42f?w=600&h=900&fit=crop&auto=format",
+    alt: "Silhouette of a lone figure against an empty landscape",
+  },
+  {
+    id: "fjord",
+    title: "Fjord",
+    year: "2022",
+    role: "Original Score",
+    img: "https://images.unsplash.com/photo-1496619465405-721b2b66a868?w=600&h=900&fit=crop&auto=format",
+    alt: "Mountain shrouded in white clouds and mist",
+  },
+  {
+    id: "skog",
+    title: "Skog",
+    year: "2021",
+    role: "Score & Ambient Textures",
+    img: "https://images.unsplash.com/photo-1633885274919-04b5af171f8c?w=600&h=900&fit=crop&auto=format",
+    alt: "Lone cyclist moving through a dark forest at night",
+  },
+  {
+    id: "drift",
+    title: "Drift",
+    year: "2021",
+    role: "Original Score",
+    img: "https://images.unsplash.com/photo-1783287364666-72538236acf4?w=600&h=900&fit=crop&auto=format",
+    alt: "Abstract atmospheric dark cinematic composition",
+  },
+  {
+    id: "echo",
+    title: "Echo",
+    year: "2020",
+    role: "Chamber Score",
+    img: "https://images.unsplash.com/photo-1715305278832-4e4a15d1a083?w=600&h=900&fit=crop&auto=format",
+    alt: "Moody atmospheric film poster on a wall",
+  },
+];
+
+export const NAV_LINKS = [
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
