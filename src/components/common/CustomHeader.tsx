@@ -2,13 +2,15 @@ import { useState } from "react";
 import { NAV_LINKS } from "../../constants/constants";
 import { MorphIcon } from "morphicons/react";
 import { Menu, X } from "lucide"; // data, not components
+import { MobilMenu } from "../ui/MobilMenu";
 
 export const CustomHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-50 border-b"
+      className="fixed top-0 left-0 right-0 z-50 border-b-none"
       style={{
         borderColor: "var(--color-border)",
         background: "rgba(12,12,12,0.92)",
@@ -47,20 +49,7 @@ export const CustomHeader = () => {
       </div>
 
       {/* Mobile menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t bg-background border border-border">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block px-6 py-4 text-sm text-muted font-light tracking-widest uppercase  border-b border-border leading-2.5"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      )}
+      <MobilMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} NAV_LINKS={NAV_LINKS}  />
     </div>
   );
 };
