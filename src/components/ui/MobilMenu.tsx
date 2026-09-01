@@ -11,15 +11,35 @@ interface MobilMenuProps {
 export const MobilMenu = ({ menuOpen, setMenuOpen, NAV_LINKS }: MobilMenuProps) => {
 
     const containerVariants = {
-        hidden: {},
+        hidden: {
+            height: 0,
+            opacity: 0,
+            overflow: "hidden",
+        },
         visible: {
+            height: "auto",
+            opacity: 1,
+            overflow: "hidden",
             transition: {
-                staggerChildren: 0.08,
+                type: "spring" as const,
+                stiffness: 120,
+                damping: 10,
+                mass: 0.2,
+
+                staggerChildren: 0.1,
             },
         },
         exit: {
+            height: 0,
+            opacity: 0,
+            overflow: "hidden",
             transition: {
-                staggerChildren: 0.04,
+                type: "spring" as const,
+                stiffness: 120,
+                damping: 10,
+                mass: 0.2,
+
+                staggerChildren: 0.2,
                 staggerDirection: -1,
             },
         },
@@ -34,16 +54,27 @@ export const MobilMenu = ({ menuOpen, setMenuOpen, NAV_LINKS }: MobilMenuProps) 
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.3,
-                ease: "easeOut" as const,
+                type: "spring" as const,
+                stiffness: 100,
+                damping: 10,
+                mass: 0.1,
+
+                duration: 0.1,
+                //ease: "easeOut" as const,
             },
+            delay: 0.1,
         },
         exit: {
             opacity: 0,
-            y: -10,
+            y: -20,
             transition: {
-                duration: 0.2,
-                ease: "easeIn" as const,
+                type: "spring" as const,
+                stiffness: 100,
+                damping: 10,
+                mass: 0.1,
+
+                duration: 0.7,
+                //ease: "easeIn" as const,
             },
         },
     }
@@ -52,17 +83,17 @@ export const MobilMenu = ({ menuOpen, setMenuOpen, NAV_LINKS }: MobilMenuProps) 
     return (
         <AnimatePresence>
             {menuOpen && (
-                <motion.div className="md:hidden border-t border-border bg-background"
+                <motion.div className="md:hidden border-t border-border bg-transparent"
                     initial='hidden'
                     animate='visible'
                     exit={'exit'}
                     variants={containerVariants}
                 >
-                    {NAV_LINKS.map((link, index) => (
+                    {NAV_LINKS.map((link) => (
                         <motion.a
                             key={link.href}
                             href={link.href}
-                            className="block px-6 py-4 text-sm text-muted font-light tracking-widest uppercase  border-b border-border leading-2.5"
+                            className="block px-6 py-4 text-sm text-muted text-center font-light tracking-widest uppercase  border-b border-border leading-2.5"
                             onClick={() => setMenuOpen(false)}
                             variants={itemVariants}              >
                             {link.label}

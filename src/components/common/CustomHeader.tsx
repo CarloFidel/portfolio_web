@@ -10,7 +10,7 @@ export const CustomHeader = () => {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-50 border-b-none"
+      className="fixed top-0 left-0 right-0 z-50 border-b"
       style={{
         borderColor: "var(--color-border)",
         background: "rgba(12,12,12,0.92)",
@@ -40,7 +40,7 @@ export const CustomHeader = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="md:hidden flex flex-col gap-1.5 p-1 cursor-pointer"
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
         >
