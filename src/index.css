@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-serif: "DM Serif Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Manrope", sans-serif;
 
   --color-background: #0c0c0c;
   --color-foreground: #f0ede8;
@@ -13,6 +13,11 @@
   --color-accent: #7eb8c9;
   --color-card: #141414;
   --color-overlay: rgba(12, 12, 12, 0.72);
+
+  --text-display: 4rem;
+  --text-title: 1.7rem;
+  --text-body: 1rem;
+  --text-small: 0.7rem;
 }
 
 html,

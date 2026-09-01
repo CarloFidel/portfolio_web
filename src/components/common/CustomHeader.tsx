@@ -18,8 +18,7 @@ export const CustomHeader = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="font-serif text-lg tracking-tight"
-          style={{ color: "var(--color-foreground)", letterSpacing: "-0.01em" }}
+          className="font-serif text-title text-foreground leading-0.5 tracking-tight "
         >
           Carlo Fidel
         </a>
@@ -30,14 +29,7 @@ export const CustomHeader = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-light tracking-widest uppercase transition-colors duration-200"
-              style={{ color: "var(--color-muted)", letterSpacing: "0.12em" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "var(--color-foreground)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = "var(--color-muted)")
-              }
+              className="text-sm text-muted leading-2.5 font-light tracking-widest uppercase transition-colors duration-200 hover:text-foreground"
             >
               {link.label}
             </a>
@@ -50,7 +42,7 @@ export const CustomHeader = () => {
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
         >
-          <MorphIcon icon={menuOpen ? X : Menu} size={25} />
+          <MorphIcon icon={menuOpen ? X : Menu} size={25} spring={"bouncy"} />
         </button>
       </div>
 
