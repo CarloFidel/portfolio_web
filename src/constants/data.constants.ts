@@ -64,9 +64,3 @@ export const POSTERS = [
     alt: "Moody atmospheric film poster on a wall",
   },
 ];
-
-export const NAV_LINKS = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];

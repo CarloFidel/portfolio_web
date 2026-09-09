@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { NAV_LINKS } from "../../constants/constants";
 import { MorphIcon } from "morphicons/react";
 import { Menu, X } from "lucide"; // data, not components
 import { MobilMenu } from "../ui/MobilMenu";
+import { NAV_LINKS } from "../../constants/navigation.constants";
 
 export const CustomHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
