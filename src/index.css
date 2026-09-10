@@ -1,31 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
 
-@theme inline {
+@theme {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Manrope", sans-serif;
 
   --color-background: #0c0c0c;
   --color-foreground: #f0ede8;
+  --color-shert: #171717;
   --color-muted: #6b6b6b;
   --color-border: #252525;
-  --color-accent: #7eb8c9;
+  --color-title: #d6d1d1;
   --color-card: #141414;
   --color-overlay: rgba(12, 12, 12, 0.72);
 
   --text-display: 4rem;
-  --text-title: 1.7rem;
+  --text-heading: 1.7rem;
   --text-body: 1rem;
   --text-small: 0.6rem;
+}
+
+[data-theme="light"] {
+  --color-background: #d6d1d1;
+  --color-foreground: #171717;
+  --color-shert: #371111;
+  --color-muted: #6f6b66;
+  --color-border: #b9b6b5;
+  --color-title: #29445a;
+  --color-card: #ffffff;
+  --color-overlay: rgba(245, 243, 239, 0.82);
 }
 
 html,
 body,
 #root {
   height: 100%;
-  background-color: #0c0c0c;
-  color: #f0ede8;
+  color: var(--color-foreground);
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
@@ -35,15 +46,18 @@ body,
 ::-webkit-scrollbar {
   width: 2px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #252525;
   border-radius: 0;
   opacity: 0;
   transition: opacity 0.3s;
 }
+
 body:hover::-webkit-scrollbar-thumb {
   opacity: 1;
 }
