@@ -9,7 +9,7 @@ import { iconsToogleColor } from "../../utility/iconsToogleColor";
 import type { LangType } from "../../types/lang.types";
 import { LANG } from "../../config/lang/lang.config";
 import { motion } from 'motion/react'
-import { fadeEfectHero, fadeEfectTitle } from "../../utility/fadeEfect";
+import {  fadeEfectTitle } from "../../config/animation/fade.animation.title";
 
 
 export const CustomHeader = () => {

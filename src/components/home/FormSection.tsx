@@ -3,7 +3,7 @@ import { CustomForm } from "../common/CustomForm"
 
 export const FormSection = () => {
     return (
-        <section className="flex flex-col gap-4 px-6 md:px-10 max-w-6xl mx-auto" >
+        <section className="flex flex-col gap-4 px-6 md:px-10 max-w-6xl mx-auto" id="contact">
             <h2 className='font-serif text-5xl md:text-5xl text-title text-center'>
                 Let's make something
                 worth remembering.

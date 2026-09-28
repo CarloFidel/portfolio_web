@@ -10,12 +10,12 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       {
-        path: PATHS.HOME,
+        index: true,
         element: <Home />,
       },
 
       {
-        path: PATHS.WORK,
+        path: PATHS.WORKS_PAGE,
         element: <Works />,
       },
     ],

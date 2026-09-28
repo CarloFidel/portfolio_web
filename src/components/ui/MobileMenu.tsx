@@ -28,7 +28,18 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, NAV_LINKS }: MobilMenuProps)
                             key={link.href}
                             href={link.href}
                             className="block px-6 py-4 text-sm text-title bg-background/50 text-center font-light uppercase border-b border-border leading-2.5"
-                            onClick={() => setMenuOpen(false)}
+                            onClick={(event) => {
+                                setMenuOpen(false)
+
+                                const target = new URL(link.href, window.location.origin)
+                                if (!target.hash || target.pathname !== window.location.pathname) return
+
+                                event.preventDefault()
+                                window.history.pushState(null, "", `${target.pathname}${target.search}${target.hash}`)
+                                requestAnimationFrame(() => {
+                                    document.querySelector(target.hash)?.scrollIntoView({ behavior: "smooth", block: "start" })
+                                })
+                            }}
                             variants={MOBILE_MENU_ITEM_VARIANTS}              >
                             {link.label}
                         </motion.a>

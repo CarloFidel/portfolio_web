@@ -3,7 +3,8 @@ import { AnimatePresence, motion } from 'motion/react'
 
 import { IMG_PATHS } from '../../constants/assets.constants'
 import { ThemeContext } from '../../contexts/theme/Theme.context'
-import { fadeEfectHero, fadeEfectTitle } from '../../utility/fadeEfect'
+import {  fadeEfectTitle } from '../../config/animation/fade.animation.title'
+import { fadeEfectHero } from '../../config/animation/fade.animation.hero'
 
 export const HeroSection = () => {
 
@@ -12,7 +13,7 @@ export const HeroSection = () => {
 
 
     return (
-        <section className='md:flex flex-col-reverse'>
+        <section className='md:flex flex-col-reverse' id='home'>
             <motion.div className='pt-18 md:pt-0 lg:relative'
                 variants={fadeEfectTitle(1.5, 0.2)}
                 initial="hidden"
