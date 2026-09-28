@@ -6,10 +6,20 @@ import { NAV_LINKS } from "../../constants/navigation.constants";
 import { IMG_PATHS } from "../../constants/assets.constants";
 import { ThemeContext } from "../../contexts/theme/Theme.context";
 import { iconsToogleColor } from "../../utility/iconsToogleColor";
+import type { LangType } from "../../types/lang.types";
+import { LANG } from "../../config/lang/lang.config";
+import { motion } from 'motion/react'
+import { fadeEfectHero, fadeEfectTitle } from "../../utility/fadeEfect";
+
 
 export const CustomHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langSwitchActive, setlangSwitchActive] = useState(false);
+
+  const [currentLang, setCurrentLang] = useState<LangType>({ label: 'EN', value: 'english' })
+
+  const languages = LANG.filter((lang) => lang.label !== currentLang.label)
+
 
   const themeContext = use(ThemeContext)
   const { theme, setTheme } = themeContext
@@ -17,6 +27,11 @@ export const CustomHeader = () => {
   const toggleTheme = () => {
     setTheme?.(theme === "dark" ? "light" : "dark");
   };
+
+  const handleLangClick = (lang: LangType) => {
+    setCurrentLang(lang)
+    setlangSwitchActive(false)
+  }
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xs transition duration-1000`}
@@ -53,19 +68,51 @@ export const CustomHeader = () => {
 
         {/* Mobile hamburger */}
         <div className="flex items-center gap-4">
+          <div className="relative flex flex-col justify-start items-start backdrop-blur-2xl">
+            <MorphIcon
+              icon={langSwitchActive ? Map : Globe}
+              size={16} spring={"smooth"}
+              strokeWidth={theme === 'dark' ? 1 : 1.5}
+              color={iconsToogleColor(theme)}
+              onClick={() => setlangSwitchActive(!langSwitchActive)}
+              className="cursor-pointer"
+            />
+            {
+              langSwitchActive && (
+                <div className="absolute top-5">
+                  {
+                    languages.map((lang, index) => (
 
-          <MorphIcon
-            icon={langSwitchActive ? Map : Globe}
-            size={16} spring={"smooth"}
-            strokeWidth={theme === 'dark' ? 1 : 1.5}
-            color={iconsToogleColor(theme)}
-            onClick={() => setlangSwitchActive(!langSwitchActive)} />
+                      <motion.p
+                        key={lang.value}
+                        variants={fadeEfectTitle(0.3, index * 0.05)}
+                        initial='hidden'
+                        animate='visible'
+                        exit={'exit'}
+                        className="font-light cursor-pointer text-[12px] mt-1"
+                        onClick={() => handleLangClick(lang)}>{lang.label}
+
+                      </motion.p>
+                    ))
+
+                  }
+                </div>
+
+              )
+
+            }
+
+
+          </div>
           <MorphIcon
             icon={theme === 'dark' ? Sun : Moon}
             size={18} spring={"smooth"}
             strokeWidth={theme === 'dark' ? 1 : 1.5}
             color={iconsToogleColor(theme)}
-            onClick={toggleTheme} />
+            onClick={toggleTheme}
+            className="cursor-pointer"
+
+          />
           <button
             className="md:hidden flex flex-col gap-1.5 p-1 cursor-pointer"
             onClick={() => setMenuOpen((o) => !o)}

@@ -4,6 +4,7 @@ export interface Poster {
     year: string,
     categories: string;
     description: string;
+    largeDescription: string;
     director: string
     img: string;
     alt?: string;

@@ -5,4 +5,5 @@ export const NAV_LINKS = [
   { label: "About", href: PATHS.ABOUT },
   { label: "Contact", href: PATHS.CONTACT },
   { label: "Dossier", href: PATHS.DOSSIER },
+  { label: "Songs", href: PATHS.SONGS },
 ];

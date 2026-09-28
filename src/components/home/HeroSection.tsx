@@ -21,9 +21,6 @@ export const HeroSection = () => {
 
             >
                 <h1 className='font-serif text-5xl lg:absolute lg:bottom-100 left-8 lg:max-w-1/3 text-center text-title md:text-7xl lg:text-8xl leading-none'>Music that lives inside the silence.</h1>
-                <p className="text-gray-200">
-                    Film Composer / Singer-songwriter
-                </p>
 
             </motion.div>
             <AnimatePresence mode="wait">
@@ -33,7 +30,8 @@ export const HeroSection = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className='md:hidden pb-2 font-extralight w-full aspect-video bg-cover mask-l-from-34 mask-b-from-54 mask-r-from-34 mask-t-from-50 flex justify-center items-end' style={{
+                    className='md:hidden pb-2 font-extralight w-full aspect-video bg-cover mask-l-from-34 mask-b-from-54 mask-r-from-34 mask-t-from-50 flex justify-center items-end' 
+                    style={{
                         backgroundImage: `url(${theme === 'dark'
                             ? IMG_PATHS.HERO_IMAGE_PHONE
                             : IMG_PATHS.HERO_IMAGE_PHONE_LIGHT
