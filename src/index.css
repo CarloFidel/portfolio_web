@@ -7,7 +7,7 @@
   --font-sans: "Manrope", sans-serif;
 
   --color-background: #0c0c0c;
-  --color-foreground: #f0ede8;
+  --color-foreground: #d3d2d2;
   --color-shert: #171717;
   --color-muted: #6b6b6b;
   --color-border: #252525;
@@ -22,8 +22,8 @@
 }
 
 [data-theme="light"] {
-  --color-background: #d6d1d1;
-  --color-foreground: #171717;
+  --color-background: #d4dae6;
+  --color-foreground: #272727;
   --color-shert: #371111;
   --color-muted: #6f6b66;
   --color-border: #b9b6b5;
@@ -32,14 +32,30 @@
   --color-overlay: rgba(245, 243, 239, 0.82);
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  color: var(--color-foreground);
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
+html {
+  background-color: black;
+  min-height: 100%;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /****** Hide scrollbar by default, show on hover/scroll *****/

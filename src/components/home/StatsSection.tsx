@@ -2,7 +2,7 @@ import { STATS } from "../../constants/experience.constants";
 
 export const StatsSection = () => {
     return (
-        <section className='w-full justify-centerç items-center pt-6'>
+        <section className='w-full pt-6'>
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-0">
                 {STATS.map((stat, index) => (

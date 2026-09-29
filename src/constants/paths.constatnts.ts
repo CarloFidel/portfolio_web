@@ -1,8 +1,10 @@
 export const PATHS = {
     HOME: "/",
-    WORK: "/work",
-    ABOUT: "/about",
-    CONTACT: "/contact",
-    DOSSIER: '/dossier'
+    WORK: "/#work",
+    WORKS_PAGE: "/works",
+    ABOUT: "/#about",
+    CONTACT: "/#contact",
+    DOSSIER: '/dossier',
+    SONGS: '/songs'
 }
 

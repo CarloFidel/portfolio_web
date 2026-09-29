@@ -1,9 +1,12 @@
 export const AboutSection = () => {
     return (
         <section className='w-full justify-center items-center pt-6 flex flex-col gap-6 px-8 mt-12'>
-            <h2 className='font-serif text-3xl text-center border-b border-border pb-4 w-full'>
-                Composing for the spaces between words
-            </h2>
+            <div className='flex flex-row border-b border-border pb-4 justify-center items-center w-full'>
+                <h2 className='font-serif text-4xl md:text-5xl text-title w-full text-center'>
+                    Composing for the spaces between words
+                </h2>
+            </div>
+
             <p className='text-muted font-extralight text-start max-w-3xl'>
                 I am Erik Lindström, a film composer based in Stockholm.
                 My work spans orchestral, chamber, and electronic textures — built to serve narrative with restraint.

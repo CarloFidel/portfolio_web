@@ -9,6 +9,7 @@ export const POSTERS: Poster[] = [
     categories: "Original Score",
     img: "https://images.unsplash.com/photo-1667857431728-00884201d629?w=600&h=900&fit=crop&auto=format",
     description: "Dramatic road lined with dark trees",
+    largeDescription: "Hvíla follows a quiet road beneath a canopy of dark, watchful trees. The music builds a restrained sense of anticipation, balancing the openness of the journey with the hidden weight of what lies beyond the frame.",
   },
   {
     id: "skuggi",
@@ -19,6 +20,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?w=600&h=900&fit=crop&auto=format",
     alt: "Solitary figure walking between trees at dusk",
     description: "A solitary journey through a quiet forest at dusk.",
+    largeDescription: "Skuggi follows a solitary figure moving through a quiet forest at dusk, where fading light and long shadows turn the journey inward. The score traces the space between uncertainty and calm, allowing each step to linger in the silence.",
   },
   {
     id: "nacht",
@@ -29,6 +31,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1572283046480-e990be92d301?w=600&h=900&fit=crop&auto=format",
     alt: "Dimly lit gas station at night under a single overhead light",
     description: "A nocturnal encounter beneath the lonely glow of a gas station.",
+    largeDescription: "Nacht captures the stillness of a late-night encounter beneath the lonely glow of a gas station. Sparse textures and distant harmonies create a suspended moment in which isolation becomes strangely intimate.",
   },
   {
     id: "stille",
@@ -39,6 +42,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1611419010196-a360856fc42f?w=600&h=900&fit=crop&auto=format",
     alt: "Silhouette of a lone figure against an empty landscape",
     description: "A lone silhouette suspended in a vast and silent landscape.",
+    largeDescription: "Stille is a study of distance, silence, and the fragile presence of a lone figure in an open landscape. Its orchestral language grows slowly, revealing emotion through restraint rather than spectacle.",
   },
   {
     id: "fjord",
@@ -49,6 +53,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1496619465405-721b2b66a868?w=600&h=900&fit=crop&auto=format",
     alt: "Mountain shrouded in white clouds and mist",
     description: "An atmospheric passage through mountains, clouds, and shifting mist.",
+    largeDescription: "Fjord moves through a landscape shaped by mountains, cloud, and shifting mist. The music follows those changing contours with broad, atmospheric passages that suggest both the scale of nature and the intimacy of moving through it.",
   },
   {
     id: "skog",
@@ -59,6 +64,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1633885274919-04b5af171f8c?w=600&h=900&fit=crop&auto=format",
     alt: "Lone cyclist moving through a dark forest at night",
     description: "A solitary ride through the deep textures of a forest after dark.",
+    largeDescription: "Skog explores the rhythm of a solitary ride through a forest after dark. Ambient textures, subtle pulses, and deep layers of sound mirror the movement between branches, shadows, and open stretches of road.",
   },
   {
     id: "drift",
@@ -69,6 +75,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1783287364666-72538236acf4?w=600&h=900&fit=crop&auto=format",
     alt: "Abstract atmospheric dark cinematic composition",
     description: "A drifting study in shadow, movement, and cinematic atmosphere.",
+    largeDescription: "Drift is an abstract cinematic study in movement and shadow. Its score resists a fixed destination, allowing fragments of sound to gather, separate, and form an atmosphere that feels perpetually in motion.",
   },
   {
     id: "echo",
@@ -79,6 +86,7 @@ export const POSTERS: Poster[] = [
     img: "https://images.unsplash.com/photo-1715305278832-4e4a15d1a083?w=600&h=900&fit=crop&auto=format",
     alt: "Moody atmospheric film poster on a wall",
     description: "An intimate chamber piece shaped by memory and lingering echoes.",
+    largeDescription: "Echo turns memory into an intimate chamber language. Small gestures and lingering repetitions create the feeling of a room after someone has left, where the past remains present in every returning sound.",
   },
 ];
 
@@ -92,6 +100,7 @@ export const SELECTED_WORKS: Poster[] = [
     img: "https://images.unsplash.com/photo-1667857431728-00884201d629?w=600&h=900&fit=crop&auto=format",
     alt: "Dramatic road lined with dark trees",
     description: "A quiet road unfolds beneath a canopy of dark, watchful trees.",
+    largeDescription: "Hvíla follows a quiet road beneath a canopy of dark, watchful trees. The music builds a restrained sense of anticipation, balancing the openness of the journey with the hidden weight of what lies beyond the frame.",
   },
   {
     id: "skuggi",
@@ -102,6 +111,7 @@ export const SELECTED_WORKS: Poster[] = [
     img: "https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?w=600&h=900&fit=crop&auto=format",
     alt: "Solitary figure walking between trees at dusk",
     description: "A solitary journey through a quiet forest at dusk.",
+    largeDescription: "Skuggi follows a solitary figure moving through a quiet forest at dusk, where fading light and long shadows turn the journey inward. The score traces the space between uncertainty and calm, allowing each step to linger in the silence.",
   },
   {
     id: "nacht",
@@ -112,6 +122,7 @@ export const SELECTED_WORKS: Poster[] = [
     img: "https://images.unsplash.com/photo-1572283046480-e990be92d301?w=600&h=900&fit=crop&auto=format",
     alt: "Dimly lit gas station at night under a single overhead light",
     description: "A nocturnal encounter beneath the lonely glow of a gas station.",
+    largeDescription: "Nacht captures the stillness of a late-night encounter beneath the lonely glow of a gas station. Sparse textures and distant harmonies create a suspended moment in which isolation becomes strangely intimate.",
   },
   {
     id: "stille",
@@ -122,26 +133,7 @@ export const SELECTED_WORKS: Poster[] = [
     img: "https://images.unsplash.com/photo-1611419010196-a360856fc42f?w=600&h=900&fit=crop&auto=format",
     alt: "Silhouette of a lone figure against an empty landscape",
     description: "A lone silhouette suspended in a vast and silent landscape.",
-  },
-  {
-    id: "fjord",
-    title: "Fjord",
-    year: "2022",
-    director: "TBA",
-    categories: "Original Score",
-    img: "https://images.unsplash.com/photo-1496619465405-721b2b66a868?w=600&h=900&fit=crop&auto=format",
-    alt: "Mountain shrouded in white clouds and mist",
-    description: "An atmospheric passage through mountains, clouds, and shifting mist.",
-  },
-  {
-    id: "skog",
-    title: "Skog",
-    year: "2021",
-    director: "TBA",
-    categories: "Score & Ambient Textures",
-    img: "https://images.unsplash.com/photo-1633885274919-04b5af171f8c?w=600&h=900&fit=crop&auto=format",
-    alt: "Lone cyclist moving through a dark forest at night",
-    description: "A solitary ride through the deep textures of a forest after dark.",
+    largeDescription: "Stille is a study of distance, silence, and the fragile presence of a lone figure in an open landscape. Its orchestral language grows slowly, revealing emotion through restraint rather than spectacle.",
   },
 
 ]

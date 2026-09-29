@@ -1,1 +1,3 @@
-export type Lang = 'eng' | 'spa' | 'cat'
+
+
+export type LangType = { label: string, value: string }
