@@ -19,7 +19,7 @@ export function EmblaCarousel() {
                         SELECTED_WORKS.map((film) => (
 
                             <div key={film.id} className="flex flex-[0_0_55%] gap-12 border border-border rounded-2xl p-4 shrink-0 ">
-                                <CustomCard title={film.title} url={film.img} size='large' type="vertical" />
+                                <CustomCard id={film.id} title={film.title} url={film.img} description={film.description} size='large' type="vertical" />
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                     <h2 className="text-3xl font-serif tet-satrt w-full text-title">{film.title}</h2>
                                     <p className="text-foreground max-w-2xs">{film.largeDescription}</p>

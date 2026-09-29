@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 
 import { IMG_PATHS } from '../../constants/assets.constants'
 import { ThemeContext } from '../../contexts/theme/Theme.context'
-import {  fadeEfectTitle } from '../../config/animation/fadeTitleHero.animation'
+import { fadeEfectTitle } from '../../config/animation/fadeTitleHero.animation'
 import { fadeEfectHero } from '../../config/animation/fade.animation.hero'
 
 export const HeroSection = () => {
@@ -31,7 +31,7 @@ export const HeroSection = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className='md:hidden pb-2 font-extralight w-full aspect-video bg-cover mask-l-from-34 mask-b-from-54 mask-r-from-34 mask-t-from-50 flex justify-center items-end' 
+                    className='md:hidden pb-2 font-extralight w-full aspect-video bg-cover mask-l-from-34 mask-b-from-54 mask-r-from-34 mask-t-from-50 flex justify-center items-end'
                     style={{
                         backgroundImage: `url(${theme === 'dark'
                             ? IMG_PATHS.HERO_IMAGE_PHONE

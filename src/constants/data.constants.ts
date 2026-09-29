@@ -8,7 +8,8 @@ export const POSTERS: Poster[] = [
     director: "TBA",
     categories: "Original Score",
     img: "https://images.unsplash.com/photo-1667857431728-00884201d629?w=600&h=900&fit=crop&auto=format",
-    description: "Dramatic road lined with dark trees",
+    alt: "Dramatic road lined with dark trees",
+    description: "A quiet road unfolds beneath a canopy of dark, watchful trees.",
     largeDescription: "Hvíla follows a quiet road beneath a canopy of dark, watchful trees. The music builds a restrained sense of anticipation, balancing the openness of the journey with the hidden weight of what lies beyond the frame.",
   },
   {
