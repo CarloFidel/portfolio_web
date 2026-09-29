@@ -20,7 +20,7 @@ export const SelectedWorksSection = () => {
       </div>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:hidden gap-6 w-full'>
         {SELECTED_WORKS.map((work, index) => (
-          <CustomCard key={index} title={work.title} url={work.img} size="medium" type="vertical" />
+          <CustomCard key={index} id={work.id} title={work.title} url={work.img} description={work.description} size="medium" type="vertical" />
         ))}
       </div>
       <div className="hidden lg:block w-full lg:max-w-11/12">

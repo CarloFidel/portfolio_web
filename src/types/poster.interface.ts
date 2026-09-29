@@ -8,4 +8,6 @@ export interface Poster {
     director: string
     img: string;
     alt?: string;
+    tracks?: { title: string; src: string }[];
+    videoUrl?: string;
 }
