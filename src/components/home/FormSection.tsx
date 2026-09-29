@@ -1,4 +1,3 @@
-import { IMG_PATHS } from "../../constants/assets.constants"
 import { CustomForm } from "../common/CustomForm"
 
 export const FormSection = () => {
@@ -11,8 +10,9 @@ export const FormSection = () => {
 
             <div className="grid grid-cols-2 justify-center items-center">
                 <CustomForm className="w-full" />
-                <div className='hidden bg-cover aspect-square md:block mask-b-from-2 mask-t-from-60% mask-r-from-1.5 mask-l-from-40' 
-                style={{ backgroundImage: `url(${IMG_PATHS.FORM_IMAGE_WEB})` }}></div>
+                <div className='hidden bg-cover aspect-square md:block mask-b-from-2 mask-t-from-60% mask-r-from-1.5 mask-l-from-40'
+                >
+                </div>
             </div>
         </section>
     )

@@ -8,8 +8,9 @@ import { ThemeContext } from "../../contexts/theme/Theme.context";
 import { iconsToogleColor } from "../../utility/iconsToogleColor";
 import type { LangType } from "../../types/lang.types";
 import { LANG } from "../../config/lang/lang.config";
-import { motion } from 'motion/react'
-import {  fadeEfectTitle } from "../../config/animation/fade.animation.title";
+import { AnimatePresence, motion } from 'motion/react'
+import { headerTransY } from "../../config/animation/headerTransY.animation";
+import { langTags } from "../../config/animation/langTgas.animation";
 
 
 export const CustomHeader = () => {
@@ -33,8 +34,13 @@ export const CustomHeader = () => {
     setlangSwitchActive(false)
   }
   return (
-    <div
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xs transition duration-1000`}
+    <motion.div
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-xs `}
+      variants={headerTransY(0.8, 0.4)}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+
     >
       <div className="max-w-8xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <a
@@ -77,30 +83,23 @@ export const CustomHeader = () => {
               onClick={() => setlangSwitchActive(!langSwitchActive)}
               className="cursor-pointer"
             />
-            {
-              langSwitchActive && (
-                <div className="absolute top-5">
-                  {
-                    languages.map((lang, index) => (
-
-                      <motion.p
-                        key={lang.value}
-                        variants={fadeEfectTitle(0.3, index * 0.05)}
-                        initial='hidden'
-                        animate='visible'
-                        exit={'exit'}
-                        className="font-light cursor-pointer text-[12px] mt-1"
-                        onClick={() => handleLangClick(lang)}>{lang.label}
-
-                      </motion.p>
-                    ))
-
-                  }
-                </div>
-
-              )
-
-            }
+            <div className="absolute top-5">
+              <AnimatePresence>
+                {langSwitchActive && languages.map((lang, index) => (
+                  <motion.p
+                    key={lang.value}
+                    variants={langTags(0.3, index * 0.05)}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="font-light cursor-pointer text-[12px] mt-1"
+                    onClick={() => handleLangClick(lang)}
+                  >
+                    {lang.label}
+                  </motion.p>
+                ))}
+              </AnimatePresence>
+            </div>
 
 
           </div>
@@ -131,6 +130,6 @@ export const CustomHeader = () => {
 
       {/* Mobile menu */}
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} NAV_LINKS={NAV_LINKS} />
-    </div>
+    </motion.div>
   );
 };
