@@ -6,6 +6,7 @@ export interface Poster {
     description: string;
     largeDescription: string;
     director: string
+    duration?: string;
     img: string;
     alt?: string;
     tracks?: { title: string; src: string }[];

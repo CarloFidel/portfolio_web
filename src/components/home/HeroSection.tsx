@@ -1,7 +1,7 @@
 import { use } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 
-import { IMG_PATHS } from '../../constants/assets.constants'
+import { MEDIA_PATHS } from '../../constants/assets.constants'
 import { ThemeContext } from '../../contexts/theme/Theme.context'
 import { fadeEfectTitle } from '../../config/animation/fadeTitleHero.animation'
 import { fadeEfectHero } from '../../config/animation/fade.animation.hero'
@@ -34,8 +34,8 @@ export const HeroSection = () => {
                     className='md:hidden pb-2 font-extralight w-full aspect-video bg-cover mask-l-from-34 mask-b-from-54 mask-r-from-34 mask-t-from-50 flex justify-center items-end'
                     style={{
                         backgroundImage: `url(${theme === 'dark'
-                            ? IMG_PATHS.HERO_IMAGE_PHONE
-                            : IMG_PATHS.HERO_IMAGE_PHONE_LIGHT
+                            ? MEDIA_PATHS.HERO_IMAGE_PHONE
+                            : MEDIA_PATHS.HERO_IMAGE_PHONE_LIGHT
                             })`,
                     }}
                 >
@@ -52,8 +52,8 @@ export const HeroSection = () => {
                 exit="exit"
                 className='hidden bg-cover w-full aspect-video md:block md:mask-b-from-80 md:mask-t-from-80 md:mask-r-from-65 md:mask-l-from-65 lg:mask-l-to-700 lg:mask-r-to-2000 lg:mask-t-from-50% lg:mask-b-from-70%' style={{
                     backgroundImage: `url(${theme === 'dark'
-                        ? IMG_PATHS.HERO_IMAGE_PHONE
-                        : IMG_PATHS.HERO_IMAGE_PHONE_LIGHT
+                        ? MEDIA_PATHS.HERO_IMAGE_PHONE
+                        : MEDIA_PATHS.HERO_IMAGE_PHONE_LIGHT
                         })`,
                 }}>
 

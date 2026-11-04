@@ -1,5 +1,5 @@
 import { use } from "react";
-import { IMG_PATHS } from "../../constants/assets.constants";
+import { MEDIA_PATHS } from "../../constants/assets.constants";
 import { MISCELLANEOUS } from "../../constants/miscellaneous.constants";
 import { ThemeContext } from "../../contexts/theme/Theme.context";
 
@@ -17,8 +17,8 @@ export const MiscellaneousSection = () => {
           className="absolute inset-0 bg-cover bg-position-[center_20%] mask-x-from-2% mask-t-from-2"
           style={{
             backgroundImage: `url(${theme === "dark"
-                ? IMG_PATHS.MISC_IMAGE_WEB
-                : IMG_PATHS.MISC_IMAGE_WEB_LIGHT
+                ? MEDIA_PATHS.MISC_IMAGE_WEB
+                : MEDIA_PATHS.MISC_IMAGE_WEB_LIGHT
               })`,
           }}
         />

@@ -5,9 +5,10 @@ import logoBgBlack from '../assets/logo-fondo-negro.png'
 import logoBgWhite from '../assets/logo_bg_white.png'
 import miscImageDark from '../assets/misc_img_dark.jpg'
 import miscImageLight from '../assets/misc_img_light.png'
+import videoLanding from '../assets/vídeos/berlin_contest.mp4'
 
 
-export const IMG_PATHS = {
+export const MEDIA_PATHS = {
     HERO_IMAGE_WEB: heroImagePhoneDark,
     HERO_IMAGE_WEB_LIGHT: heroImagePhoneLight,
 
@@ -21,5 +22,7 @@ export const IMG_PATHS = {
     FORM_IMAGE_PHONE: heroImagePhoneLight,
 
     LOGO_BG_BLACK: logoBgBlack,
-    LOGO_BG_WHITE: logoBgWhite
+    LOGO_BG_WHITE: logoBgWhite,
+
+    VIDEO_LANDING: videoLanding
 }

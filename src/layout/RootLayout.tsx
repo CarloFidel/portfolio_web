@@ -14,7 +14,7 @@ const RootLayout = () => {
       <header data-theme={theme}>
         <CustomHeader />
       </header>
-      <main data-theme={theme} className="bg-background transition-discrete duration-400">
+      <main data-theme={theme} className="bg-background transition-discrete duration-400 px-2">
         <Pages />
       </main>
       <footer data-theme={theme} className="bg-background transition-discrete duration-200">
