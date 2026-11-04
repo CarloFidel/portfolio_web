@@ -13,5 +13,7 @@ export const VideoPlayer = ({ videoUrl }: Props) => {
             width="100%"
             height="auto"
             className='rounded-2xl'
+            playing
+            
         />)
 }
