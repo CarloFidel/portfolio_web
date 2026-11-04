@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 
 interface Props {
@@ -5,6 +6,16 @@ interface Props {
 }
 
 export const VideoPlayer = ({ videoUrl }: Props) => {
+
+    const [isScrolling, setIsScrolling] = useState<boolean>(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setIsScrolling(true)
+        })
+
+    }, [])
+
     return (
 
         <ReactPlayer
@@ -13,5 +24,9 @@ export const VideoPlayer = ({ videoUrl }: Props) => {
             width="100%"
             height="auto"
             className='rounded-2xl'
+            loop
+            muted
+            playing={isScrolling}
+
         />)
 }

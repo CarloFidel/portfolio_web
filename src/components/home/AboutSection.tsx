@@ -1,6 +1,6 @@
 export const AboutSection = () => {
     return (
-        <section className='w-full justify-center items-center pt-6 flex flex-col gap-6 px-8 mt-12'>
+        <section className='w-full justify-center items-center pt-2 flex flex-col gap-6 px-4 mt-12'>
             <div className='flex flex-row border-b border-border pb-4 justify-center items-center w-full'>
                 <h2 className='font-serif text-4xl md:text-5xl text-title w-full text-center'>
                     Composing for the spaces between words
