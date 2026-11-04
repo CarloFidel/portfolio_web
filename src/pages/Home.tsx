@@ -1,21 +1,21 @@
 import { HeroSection } from "../components/home/HeroSection";
-import { StatsSection } from "../components/home/StatsSection";
 import { FormSection } from "../components/home/FormSection";
 import { SelectedWorksSection } from "../components/home/SelectedWorksSection";
 import { AboutSection } from "../components/home/AboutSection";
-import { MiscellaneousSection } from "../components/home/MiscellaneousSection";
 import { VideoSection } from "../components/home/VideoSection";
+import { MEDIA_PATHS } from "../constants/assets.constants";
 
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
+      <VideoSection videoUrl={MEDIA_PATHS.VIDEO_LANDING} />
       <SelectedWorksSection />
-      <VideoSection />
       <AboutSection />
-      <MiscellaneousSection />
+      {/* <MiscellaneousSection /> */}
+      <VideoSection videoUrl={MEDIA_PATHS.VIDEO_SONGWRIGTER} />
       <FormSection />
     </>
 
