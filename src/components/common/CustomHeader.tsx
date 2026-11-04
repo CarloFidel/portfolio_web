@@ -3,7 +3,7 @@ import { MorphIcon, } from "morphicons/react";
 import { Globe, Map, Menu, Moon, Sun, X } from "lucide"; // data, not components
 import { MobileMenu } from "../ui/MobileMenu";
 import { NAV_LINKS } from "../../constants/navigation.constants";
-import { IMG_PATHS } from "../../constants/assets.constants";
+import { MEDIA_PATHS } from "../../constants/assets.constants";
 import { ThemeContext } from "../../contexts/theme/Theme.context";
 import { iconsToogleColor } from "../../utility/iconsToogleColor";
 import type { LangType } from "../../types/lang.types";
@@ -49,9 +49,9 @@ export const CustomHeader = () => {
         >
           {
             theme === 'dark' ? (
-              <img src={IMG_PATHS.LOGO_BG_BLACK} alt="Carlo Fidel logo" className="w-15 aspect-square object-contain" />
+              <img src={MEDIA_PATHS.LOGO_BG_BLACK} alt="Carlo Fidel logo" className="w-15 aspect-square object-contain" />
             ) : (
-              <img src={IMG_PATHS.LOGO_BG_WHITE} alt="Carlo Fidel logo" className="w-9.5 ml-2.5 aspect-square object-contain opacity-70" />
+              <img src={MEDIA_PATHS.LOGO_BG_WHITE} alt="Carlo Fidel logo" className="w-9.5 ml-2.5 aspect-square object-contain opacity-70" />
             )
           }
           <h2 className={`hidden md:block text-3xl text-title ${theme === 'light' ? 'ml-3' : ''}`}>
