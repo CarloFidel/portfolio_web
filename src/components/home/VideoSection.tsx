@@ -27,9 +27,6 @@ export const VideoSection = ({ headerTitle, videoUrl, footerText, workTitle }: P
                 <figcaption className="mt-3 text-sm text-muted w-full text-center">
                     {footerText}
                     <span className="block text-center text-muted text-[11px] mt-2"> Music by Carlo Fidel Taboada.</span>
-                <figcaption className="mt-3 text-sm text-muted w-full text-center">
-                    {footerText}
-                    <span className="block text-center text-muted text-[11px] mt-2"> Music by Carlo Fidel Taboada.</span>
                 </figcaption>
                 <div className="absolute top-2 right-2 w-fit  opacity-80 rounded-2xl backdrop-blur-2xl ">
                     <img

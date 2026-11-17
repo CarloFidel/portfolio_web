@@ -1,11 +1,17 @@
 import { PROJECT_CATEGORY_OPTIONS } from "../../constants/projectCategory.constants";
 import { PrimaryButton } from "../ui/PrimaryButton";
+import { useForm } from 'react-hook-form';
+import type { ContactFormData } from '../../interfaces/form-data.interface';
+
 
 interface Props {
     className?: string;
 }
 
 export const CustomForm = ({ className }: Props) => {
+
+    const { register, handleSubmit } = useForm<ContactFormData>( zodResolver(FormDataSchema));
+
     return (
         <form className={className}>
             <div className="grid gap-6 md:grid-cols-2">
