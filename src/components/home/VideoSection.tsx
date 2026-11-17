@@ -2,7 +2,7 @@ import { POSTERS, type PosterTitle } from "../../constants/data.constants"
 import { VideoPlayer } from "../ui/VideoPlayer"
 
 interface Props {
-    headerTitle: string
+
     headerTitle: string
     videoUrl: string
     footerText: string
