@@ -15,6 +15,7 @@ const Home = () => {
         headerTitle="Scoring"
         videoUrl={MEDIA_PATHS.VIDEO_LANDING}
         footerText="Trail of Light — Berlin International Film Scoring Competition 2024."
+        workTitle='Hvíla'
       />
       <SelectedWorksSection />
       <AboutSection />
@@ -23,6 +24,7 @@ const Home = () => {
         headerTitle="ORCHESTRAL"
         videoUrl={MEDIA_PATHS.VIDEO_BRATISLAVA}
         footerText="Bratislava Symphonic Orchestra."
+        workTitle="Stille"
       />
       <FormSection />
     </>

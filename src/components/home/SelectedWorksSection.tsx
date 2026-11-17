@@ -9,10 +9,10 @@ import { EmblaCarousel } from "../ui/EmblaCarousel"
 export const SelectedWorksSection = () => {
 
   return (
-    <section className='w-full justify-center items-center pt-2 flex flex-col gap-6 px-4 mt-12' id="work">
+    <section className='w-full justify-center items-center pt-2 flex flex-col gap-6 px-4 mt-8' id="work">
       <div className='flex border-b border-border pb-4 justify-between items-center w-full'>
-        <h2 className='font-serif text-4xl md:text-7xl text-title '>
-          Selected Works
+        <h2 className='font-serif text-3xl md:text-7xl text-title '>
+          SELECTED WORKS
         </h2>
         <p className='text-muted light:text-shert font-extralight'>
           {SELECTED_WORKS.length} projects

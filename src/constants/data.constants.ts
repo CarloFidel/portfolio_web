@@ -1,6 +1,6 @@
 import type { Poster } from "../types/poster.interface";
 
-export const POSTERS: Poster[] = [
+const POSTER_ENTRIES = [
   {
     id: "hvila",
     title: "Hvíla",
@@ -89,7 +89,11 @@ export const POSTERS: Poster[] = [
     description: "An intimate chamber piece shaped by memory and lingering echoes.",
     largeDescription: "Echo turns memory into an intimate chamber language. Small gestures and lingering repetitions create the feeling of a room after someone has left, where the past remains present in every returning sound.",
   },
-];
+] as const satisfies readonly Poster[];
+
+export type PosterTitle = (typeof POSTER_ENTRIES)[number]["title"];
+
+export const POSTERS: Poster[] = POSTER_ENTRIES.map((poster) => ({ ...poster }));
 
 export const SELECTED_WORKS: Poster[] = [
   {
