@@ -11,11 +11,19 @@ const Home = () => {
     <>
       <HeroSection />
       {/* <StatsSection /> */}
-      <VideoSection videoUrl={MEDIA_PATHS.VIDEO_LANDING} />
+      <VideoSection
+        headerTitle="Scoring"
+        videoUrl={MEDIA_PATHS.VIDEO_LANDING}
+        footerText="Trail of Light — Berlin International Film Scoring Competition 2024."
+      />
       <SelectedWorksSection />
       <AboutSection />
       {/* <MiscellaneousSection /> */}
-      <VideoSection videoUrl={MEDIA_PATHS.VIDEO_SONGWRIGTER} />
+      <VideoSection
+        headerTitle="ORCHESTRAL"
+        videoUrl={MEDIA_PATHS.VIDEO_BRATISLAVA}
+        footerText="Bratislava Symphonic Orchestra."
+      />
       <FormSection />
     </>
 

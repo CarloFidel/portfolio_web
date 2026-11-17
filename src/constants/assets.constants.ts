@@ -6,6 +6,7 @@ import logoBgWhite from '../assets/logo_bg_white.png'
 import miscImageDark from '../assets/misc_img_dark.jpg'
 import miscImageLight from '../assets/misc_img_light.png'
 import videoLanding from '../assets/vídeos/berlin_contest.mp4'
+import videoBratislava from '../assets/vídeos/bratislava_orchestra.mp4'
 
 
 
@@ -26,5 +27,6 @@ export const MEDIA_PATHS = {
     LOGO_BG_WHITE: logoBgWhite,
 
     VIDEO_LANDING: videoLanding,
-    VIDEO_SONGWRIGTER: 'https://youtu.be/XfPB_NJWqqk'
+    VIDEO_SONGWRIGTER: 'https://youtu.be/XfPB_NJWqqk',
+    VIDEO_BRATISLAVA: videoBratislava,
 }
