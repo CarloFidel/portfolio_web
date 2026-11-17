@@ -3,6 +3,7 @@ import { VideoPlayer } from "../ui/VideoPlayer"
 
 interface Props {
     headerTitle: string
+    headerTitle: string
     videoUrl: string
     footerText: string
     workTitle: PosterTitle
@@ -23,6 +24,9 @@ export const VideoSection = ({ headerTitle, videoUrl, footerText, workTitle }: P
             </h2>
             <figure className="relative w-full mt-2 flex flex-col justify-center">
                 <VideoPlayer videoUrl={videoUrl} />
+                <figcaption className="mt-3 text-sm text-muted w-full text-center">
+                    {footerText}
+                    <span className="block text-center text-muted text-[11px] mt-2"> Music by Carlo Fidel Taboada.</span>
                 <figcaption className="mt-3 text-sm text-muted w-full text-center">
                     {footerText}
                     <span className="block text-center text-muted text-[11px] mt-2"> Music by Carlo Fidel Taboada.</span>

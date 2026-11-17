@@ -8,6 +8,7 @@ export const FormSection = () => {
             </h2>
 
             <CustomForm className="w-full" />
+            <CustomForm className="w-full" />
         </section>
     )
 }
