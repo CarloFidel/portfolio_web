@@ -1,6 +1,5 @@
-
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { contactFormSchema } from "../src/schema/contact-form.schema";
+import { contactFormSchema } from '../src/schema/contact-form.schema.ts'
 
 export default async function handler(
     req: VercelRequest,
@@ -39,6 +38,18 @@ export default async function handler(
             });
         }
 
+        console.log(apiKey, senderEmail, contactEmail, validation.data);
+        console.log(JSON.stringify({
+            sender: {
+                name: "Portfolio",
+                email: senderEmail
+            },
+            to: [
+                {
+                    email: contactEmail
+                }
+            ]
+        }));
         // Enviar correo mediante Brevo
         const brevoResponse = await fetch(
             "https://api.brevo.com/v3/smtp/email",
