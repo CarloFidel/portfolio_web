@@ -38,18 +38,6 @@ export default async function handler(
             });
         }
 
-        console.log(apiKey, senderEmail, contactEmail, validation.data);
-        console.log(JSON.stringify({
-            sender: {
-                name: "Portfolio",
-                email: senderEmail
-            },
-            to: [
-                {
-                    email: contactEmail
-                }
-            ]
-        }));
         // Enviar correo mediante Brevo
         const brevoResponse = await fetch(
             "https://api.brevo.com/v3/smtp/email",
